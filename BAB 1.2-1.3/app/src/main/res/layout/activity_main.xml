@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/article_heading"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        android:text="@string/article_title"/>
+
+    <TextView
+        android:id="@+id/article_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/article_heading"
+        android:background="#30987B"
+        android:padding="@dimen/padding_reguler"
+        android:text="@string/article_subtitle"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/article_subheading">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:background="#E3E6E8"
+                android:lineSpacingExtra="5sp"
+                android:padding="@dimen/padding_reguler"
+                android:text="@string/article_text" />
+
+            <Button
+                android:id="@+id/button_selesai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/article_subheading"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#768E5A"
+                android:onClick="launchSecondActivity"
+                android:text="selesai" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
